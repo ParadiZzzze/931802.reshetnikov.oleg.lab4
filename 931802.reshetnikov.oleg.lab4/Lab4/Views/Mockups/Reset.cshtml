@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Reset Your Password";
+}
+
+<div class="text-left">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <form  method="post">
+        <b>Email</b>
+        <p><input type="email" name="Email"><b>@ViewData["EmailError"]</p>
+        <input class ="submit" type ="submit" name="Code"  value="Send me a code" />
+        <input type ="submit" name="Code"  value="I have a code"/>
+    </form>
+</div>

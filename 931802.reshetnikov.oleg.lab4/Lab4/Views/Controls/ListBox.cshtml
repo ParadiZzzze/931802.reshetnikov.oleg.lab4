@@ -1,0 +1,11 @@
+﻿    <div class="text-left">
+        <form runat="server" method="post">
+            <h1 class="display-4">@ViewData["Title"]</h1>
+            <nobr>Text</nobr>
+            <br>
+            @Html.ListBox("Text", ViewBag.Months as SelectList)
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+

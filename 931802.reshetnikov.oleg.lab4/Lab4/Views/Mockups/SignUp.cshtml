@@ -1,0 +1,29 @@
+﻿@model AccountData
+@{
+    ViewData["Title"] = "Sign Up";
+}
+    <div class="text-left">
+        <h1 class="display-4">@ViewData["Title"]</h1>
+        <form method="post">
+            <b>@Html.LabelFor(model => model.FirstName)</b><br>
+            @Html.TextBoxFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)<br>
+
+            <b> @Html.LabelFor(model => model.LastName)</b><br>
+            @Html.TextBoxFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)<br>
+
+            <b>Bithday</b><br>
+            @Html.DropDownListFor(model => model.BDay, ViewBag.Days as SelectList)
+            @Html.DropDownListFor(model => model.BMonth, ViewBag.Months as SelectList)
+            @Html.DropDownListFor(model => model.BYear, ViewBag.Years as SelectList)<br>
+
+            <b>Gender</b><br>
+            <span>Male</span>
+            @Html.RadioButtonFor(model => model.Gender, "Male") @Html.ValidationMessageFor(model => model.Gender)<br>
+            <span>Female</span>
+            @Html.RadioButtonFor(model => model.Gender, "Female")<br>
+
+            <input type="submit" class="ButtonBlue" name="submit" value="Sign Up">
+        </form>
+    </div>

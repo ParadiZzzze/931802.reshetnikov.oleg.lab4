@@ -1,0 +1,17 @@
+﻿@model AccountData 
+@{
+    ViewData["Title"] = "Sign up result";
+}
+<div class="text-left">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    First Name : @Model.FirstName<br>
+    Last Name : @Model.LastName<br>
+    Bithday : @Model.BDay @Model.BMonth @Model.BYear<br>
+    Gender : @Model.Gender<br>
+    Email : @Model.Email<br>
+    Password : @Model.Password<br>
+    Remember : @Model.Remember
+    <form  method="post">
+        <input type ="submit" value="show bd">
+    </form>
+</div>

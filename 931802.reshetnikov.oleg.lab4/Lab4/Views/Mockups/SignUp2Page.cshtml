@@ -1,0 +1,22 @@
+﻿@model AccountData
+@{
+    ViewData["Title"] = "Sign Up";
+}
+<div class="text-left">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <form method="post">
+
+        <b>@Html.LabelFor(model => model.Email)</b><br>
+        @Html.TextBoxFor(model => model.Email)
+        <b>@ViewData["EmailConfirm"]</b><br>
+
+        <b>Password</b><br>
+        <input type="password" name="Password1Confrim"><br>
+        <b>Confirm password</b><br>
+        <input type="password" name="Passwor2Confrim"> <b>@ViewData["PasswordConfirm"]</b><br>
+        @Html.CheckBoxFor(model=>model.Remember)
+        <span>Remember?</span><br>
+        <input type="submit" class="ButtonBlue" name="submit" value="Sign Up">
+    </form>
+</div>
+
